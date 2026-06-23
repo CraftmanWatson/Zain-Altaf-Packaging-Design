@@ -610,7 +610,7 @@ body {
         height: 100vh;
         background: url(hero-img.jpeg);
         background-size: 550px;
-        background-position-y: 600px;
+        background-position-y: 550px;
         background-position-x: center;
         background-repeat: no-repeat;
         background-color: black;
