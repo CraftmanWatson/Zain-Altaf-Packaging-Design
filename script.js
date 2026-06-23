@@ -14,8 +14,7 @@ const testimonialBtn = document.querySelector(".testimonial-btn");
 const contactBtn = document.querySelector(".contact-btn");
 const contactBtn2 = document.querySelector(".hero-cta2");
 const processBtn = document.querySelector(".process-btn");
-const toIg = document.querySelector("#to-ig");
-const toWa = document.querySelector("#to-wa");
+const toIg = document.querySelector(".footer-cta");
 
 
 navBtn.addEventListener("click", function () {
