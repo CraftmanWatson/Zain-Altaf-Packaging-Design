@@ -1,0 +1,740 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: white;
+    --accent-color: red;
+    --bg-color: white;
+}
+
+body {
+    margin: 0px;
+    font-family: "Pliant";
+    color: var(--primary-color);
+    background: var(--bg-color);
+}
+
+.header {
+    background-color: none;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.header-container {
+    margin: 2px auto;
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container .logo {
+    height: 100px;
+    z-index: 110;
+}
+
+.header-container .nav-btn {
+    visibility: hidden;
+}
+.header-container .nav-screen ul {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+.header-container .nav-screen ul li {
+    padding: 5px 5px;
+    font-family: "Pliant";
+    transition: 0.3s ease;
+    cursor: pointer;
+    bottom: 0;
+    position: relative;
+    color: var(--secondary-color);
+}
+.header-container .nav-screen ul li:hover {
+    bottom: 5px;
+    color: var(--accent-color);
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0px;
+    background-size: cover;
+    height: 70vh;
+    background: black;
+}
+.hero-content {
+    width: 40%;
+    font-family: "Inter";
+    color: var(--secondary-color);
+}
+.hero-content .hero-headline {
+    font-size: 50px;
+    margin: 3px;
+}
+.hero-content .hero-subline {
+    font-size: 1rem;
+    width: 80%;
+}
+.hero-img {
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;
+    background: url(hero-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.hero-content .hero-cta {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-family: "Pliant";
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid var(--accent-color);
+    margin-top: 10px;
+}
+.hero-content .hero-cta2 {
+    background: none;
+    color: var(--accent-color);
+    font-family: "Pliant";
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    margin-left: 15px;
+}
+.hero-content .hero-cta:hover {
+        background: var(--primary-color);
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: var(--accent-color);
+}
+.hero-content .hero-cta2:hover {
+        background: var(--primary-color);
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0px;
+    background: rgba(0,0,0,0.05);
+    margin-top: 100px;
+}
+.about-img {
+    width: 350px;
+    height: 250px;
+    border-radius: 50px;
+    background: url(about-img.png);
+    background-size: cover;
+    background-position: center;
+}
+.about-content {
+    width: 400px;
+    text-align: start;
+}
+.about-content .about-headline {
+    font-size: 20px;
+    font-family: "Pliant";
+    margin: 4px 0px;
+    letter-spacing: 0.2px;
+}
+.about-content .about-subline {
+    font-size: 1rem;
+    font-family: "Pliant";
+    margin: 8px 0px;
+    letter-spacing: 0.5px;
+}
+
+.portfolio {
+    margin: 30px;
+    margin-top: 100px;
+}
+.portfolio .portfolio-headline {
+    font-family: "Pliant";
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+.portfolio .portfolio-subline {
+    font-family: "Pliant";
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.portfolio-cards-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    user-select: none;
+    overflow-x: auto;
+}
+
+.portfolio .portfolio-card {
+    min-width: 350px;
+    height: 200px;
+}
+.portfolio-card-container {
+    color: var(--secondary-color);
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 0px;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.portfolio-card-container:hover {
+    color: var(--secondary-color);
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 0px;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.portfolio-detail {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    width: 70%;
+}
+.portfolio-name {
+    margin: 10px;
+    opacity: 1;
+}
+.portfolio #card-1 {
+    background: url(portfolio1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1); 
+    background-blend-mode: multiply;      
+    transition: all 0.3s ease;            
+}
+.portfolio #card-2 {
+    background: url(portfolio2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1); 
+    background-blend-mode: multiply;      
+    transition: all 0.3s ease;            
+}
+.portfolio #card-3 {
+    background: url(portfolio3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1); 
+    background-blend-mode: multiply;      
+    transition: all 0.3s ease;            
+}
+.portfolio #card-4 {
+    background: url(portfolio4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1); 
+    background-blend-mode: multiply;      
+    transition: all 0.3s ease;            
+}
+
+.portfolio .portfolio-card:hover {
+    scale: 0.98;
+}
+
+#card-1:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#card-2:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#card-3:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#card-4:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio .card-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(portfolio1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.portfolio .card-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(portfolio2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.portfolio .card-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(portfolio3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.testimonial {
+    margin: 60px;
+    margin-top: 100px;
+}
+.testimonial-headline {
+    text-align: center;
+    font-family: "Pliant";
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.testimonial-cards-group {
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+    overflow-x: auto;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.testimonial-card {
+    height: 330px;
+    min-width: 350px;
+    max-width: 400px;
+    background: rgba(0,0,0,0.03);
+    padding: 30px;
+}
+.user-profession {
+    text-align: center;
+}
+.testimonial-card .user-pfp1 {
+    height: 80px;
+    width: 80px;
+    background: url(sarah.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-pfp2 {
+    height: 80px;
+    width: 80px;
+    background: url(vence.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-pfp3 {
+    height: 80px;
+    width: 80px;
+    background: url(maya.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-name {
+    font-family: "Pliant";
+    text-align: center;
+    margin-top: 10px;
+}
+.testimonial-card .user-feedback {
+    text-align: justify;
+    font-family: "Pliant";
+}
+.testimonial-card .user-rating {
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    margin: 0px;
+    background: var(--primary-color);
+    border: 1px solid transparent;
+    margin-top: 100px;
+    border: 1px solid var(--primary-color);
+}
+.footer-column-card-group {
+    margin: 30px 60px;
+    color: var(--secondary-color);
+    font-family: "Pliant";
+    letter-spacing: 1px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social-column-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100px;
+    gap: 20px;
+    font-size: 20px;
+}
+.footer-column-card {
+    width: 350px;
+    
+}
+.footer-copyright-card {
+    width: 100%;
+    color: var(--secondary-color);
+    text-align: center;
+}
+.footer-cta {
+    font-family: "Pliant";
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background: none;
+    padding: 10px 15px;
+}
+.footer-cta:hover {
+    transition: 0.3s ease;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.footer-cta i {
+    padding-left: 5px;
+}
+.footer-copyright-card {
+    width: 70%;
+    margin: 0 auto;
+}
+.process {
+    margin-top: 100px;
+}
+.process-headline {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.process-cards-group {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 🌟 BUG FIX BASE UTAMA: Wajib dikasih relative biar angka gedenya gak berantakan */
+.process-card {
+    position: relative; 
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.process-detail {
+    font-size: 20px;
+    text-align: center;
+    z-index: 2; /* Biar tulisan ada di depan angka */
+}
+.process-card-bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+    opacity: 0.2;
+    z-index: 1; /* Biar angka di belakang teks */
+}
+
+
+/* ==========================================================================
+   🔥🔥 KHUSUS DESKTOP LAYOUT FIXES (Min-Width: 769px) 🔥🔥
+   ========================================================================== */
+@media (min-width: 769px) {
+    /* Batasi agar header tidak melebar berantakan di monitor ultra-wide */
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* PORTFOLIO: Ubah dari horizontal scrollbar jadi GRID 2 KOLOM yang kokoh */
+    .portfolio-cards-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        overflow-x: visible; /* Hilangkan scroll samping desktop */
+    }
+    .portfolio .portfolio-card {
+        width: 100%;
+        min-width: unset; /* Reset style mobile */
+        height: 320px;   /* Tingginya ditambah biar lebih megah */
+    }
+
+    /* PROCESS: Sejajarkan 4 langkah berdampingan dengan rapi */
+    .process-cards-group {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+    .process-card, .process-card-bg {
+        width: 100%;
+    }
+
+    /* TESTIMONIAL: Jejerkan kartu testimoni, hilangkan scrollbar samping */
+    .testimonial-cards-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        overflow-x: visible;
+    }
+    .testimonial-card {
+        width: 100%;
+        max-width: unset;
+        height: auto; /* Biar tinggi menyesuaikan isi teks testimoni */
+    }
+
+    /* FOOTER CONTAINER CONTROL */
+    .footer-column-card-group {
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+}
+
+
+/* ==========================================================================
+   YANG MOBILE DI BAWAH INI SAMA SEKALI TIDAK DIUBAH (SESUAI REQUEST)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 7px;
+        z-index: 100;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    .header-container .logo {
+        height: 100px;
+    }
+    .header-container .nav-btn {
+        visibility: visible;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .header-container .nav-screen {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: var(--bg-color);
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 100;
+        transform: translateX(100vw);
+    }
+    .header-container .nav-screen.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .header-container .nav-screen ul {
+        flex-direction: column;
+        width: 90vw;
+        gap: 0px;
+        top: 100px;
+        position: relative;
+    }
+    .header-container .nav-screen ul li {
+        border-bottom: 0.5px solid rgba(0,0,0,0.3);
+        padding: 30px 0px;
+        color: var(--primary-color);
+    }
+    .header-container .nav-btn {
+        height: 50px;
+        width: 70px;
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 110;
+    }
+    .header-container .nav-btn .bar-1 {
+        width: 100%;
+        height: 5%;
+        background: var(--accent-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn .bar-2 {
+        width: 100%;
+        height: 5%;
+        background: var(--accent-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn .bar-3 {
+        width: 100%;
+        height: 5%;
+        background: var(--accent-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn.cross .bar-1 {
+        transform: rotate(40deg)translate(14px, 18px);
+    }
+    .header-container .nav-btn.cross .bar-3 {
+        transform: rotate(-40deg)translate(14px, -18px);
+    }
+    .header-container .nav-btn.cross .bar-2 {
+        opacity: 0;
+    }
+    .hero {
+        justify-content: center;
+        padding-bottom: 40px;
+        height: 100vh;
+        background: url(hero-img.jpeg);
+        background-size: 650px;
+        background-position-y: 620px;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-color: black;
+    }
+    .hero-content {
+        width: 90%;
+        position: relative;
+        bottom: 80px;
+    }
+    .hero-cta-group {
+        display: flex;
+    }
+    .hero-content .hero-cta {
+        font-size: 20px;
+    }
+    .hero-content .hero-cta2 {
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    
+    .hero-content .hero-headline {
+        font-size: 3.2rem;
+        margin: 4px 0px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    .hero-content .hero-subline {
+        width: 80%;
+        margin: 10px 0px;
+        letter-spacing: 1px;
+    }
+    .hero .hero-img {
+        display: none;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-content {
+        width: 70%;
+        margin-right: 20px;
+    }
+    
+    .portfolio-cards-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .portfolio-cards-group .portfolio-card {
+        width: 100%;
+        min-width: unset;
+        height: 250px;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .testimonial-cards-group {
+        display: flex;
+        flex-direction: column;   
+        width: 100%;            
+        overflow-x: hidden;
+        gap: 20px;             
+    }
+    .testimonial-card {
+        width: 100%;
+        min-width: 0;          
+        height: auto;       
+        padding: 20px;            
+        box-sizing: border-box;
+    }
+    .testimonial-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .services-cards-group {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 15px;
+    }
+    .services-card {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .footer-column-card-group {
+        flex-direction: column;
+    }
+    .footer-column-card {
+        width: 100%;
+    }
+    .footer-social-column-card {
+        flex-direction: row;
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .process-cards-group {
+        flex-direction: column;
+        align-items: center;
+    }  
+    .process-card {
+        width: 100%;
+        height: 300px;
+    }
+    .process-card-bg {
+        width: 100%;
+        height: 300px;
+        font-size: 13rem;
+    }
+    .process-detail {
+        font-size: 30px;
+    }
+}
