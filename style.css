@@ -630,6 +630,7 @@ body {
     }
     .hero-content {
         width: 90%;
+        margin-top: 100px;
     }
     .hero-cta-group {
         display: flex;
@@ -644,7 +645,7 @@ body {
     }
     
     .hero-content .hero-headline {
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 4px 0px;
         letter-spacing: 0.5px;
         font-weight: bold;
