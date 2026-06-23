@@ -14,7 +14,8 @@ const testimonialBtn = document.querySelector(".testimonial-btn");
 const contactBtn = document.querySelector(".contact-btn");
 const contactBtn2 = document.querySelector(".hero-cta2");
 const processBtn = document.querySelector(".process-btn");
-
+const toIg = document.querySelector("#to-ig");
+const toWa = document.querySelector("#to-wa");
 
 
 navBtn.addEventListener("click", function () {
@@ -70,3 +71,6 @@ contactBtn2.addEventListener("click", function() {
     navScreen.classList.remove("active");
 });
 
+toIg.addEventListener("click", function() {
+    window.location.href = "https://www.instagram.com/zain_altaf_packaging_designer?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+});
