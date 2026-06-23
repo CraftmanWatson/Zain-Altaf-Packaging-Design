@@ -622,15 +622,15 @@ body {
         padding-bottom: 40px;
         height: 100vh;
         background: url(hero-img.jpeg);
-        background-size: 650px;
-        background-position-y: 620px;
+        background-size: 550px;
+        background-position-y: 600px;
         background-position-x: center;
         background-repeat: no-repeat;
         background-color: black;
     }
     .hero-content {
         width: 90%;
-        margin-top: 40px;
+        margin-top: 10px;
     }
     .hero-cta-group {
         display: flex;
