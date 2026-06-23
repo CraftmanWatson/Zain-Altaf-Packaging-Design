@@ -411,6 +411,7 @@ body {
     color: var(--secondary-color);
     background: none;
     padding: 10px 15px;
+    margin-top: 15px;
 }
 .footer-cta:hover {
     transition: 0.3s ease;
