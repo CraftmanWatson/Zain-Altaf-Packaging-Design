@@ -440,7 +440,6 @@ body {
     justify-content: center;
 }
 
-/* 🌟 BUG FIX BASE UTAMA: Wajib dikasih relative biar angka gedenya gak berantakan */
 .process-card {
     position: relative; 
     width: 300px;
@@ -452,7 +451,7 @@ body {
 .process-detail {
     font-size: 20px;
     text-align: center;
-    z-index: 2; /* Biar tulisan ada di depan angka */
+    z-index: 2;
 }
 .process-card-bg {
     position: absolute;
@@ -464,21 +463,16 @@ body {
     align-items: center;
     color: var(--accent-color);
     opacity: 0.2;
-    z-index: 1; /* Biar angka di belakang teks */
+    z-index: 1;
 }
 
-
-/* ==========================================================================
-   🔥🔥 KHUSUS DESKTOP LAYOUT FIXES (Min-Width: 769px) 🔥🔥
-   ========================================================================== */
 @media (min-width: 769px) {
-    /* Batasi agar header tidak melebar berantakan di monitor ultra-wide */
+
     .header-container {
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    /* PORTFOLIO: Ubah dari horizontal scrollbar jadi GRID 2 KOLOM yang kokoh */
     .portfolio-cards-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -486,15 +480,14 @@ body {
         width: 100%;
         max-width: 1140px;
         margin: 0 auto;
-        overflow-x: visible; /* Hilangkan scroll samping desktop */
+        overflow-x: visible; 
     }
     .portfolio .portfolio-card {
         width: 100%;
-        min-width: unset; /* Reset style mobile */
-        height: 320px;   /* Tingginya ditambah biar lebih megah */
+        min-width: unset;
+        height: 320px;   
     }
 
-    /* PROCESS: Sejajarkan 4 langkah berdampingan dengan rapi */
     .process-cards-group {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -506,7 +499,6 @@ body {
         width: 100%;
     }
 
-    /* TESTIMONIAL: Jejerkan kartu testimoni, hilangkan scrollbar samping */
     .testimonial-cards-group {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -519,20 +511,15 @@ body {
     .testimonial-card {
         width: 100%;
         max-width: unset;
-        height: auto; /* Biar tinggi menyesuaikan isi teks testimoni */
+        height: auto; 
     }
 
-    /* FOOTER CONTAINER CONTROL */
     .footer-column-card-group {
         max-width: 1200px;
         margin: 30px auto;
     }
 }
 
-
-/* ==========================================================================
-   YANG MOBILE DI BAWAH INI SAMA SEKALI TIDAK DIUBAH (SESUAI REQUEST)
-   ========================================================================== */
 @media (max-width: 768px) {
     .header {
         padding: 15px 7px;
@@ -630,7 +617,7 @@ body {
     }
     .hero-content {
         width: 90%;
-        margin-top: 10px;
+        margin-top: 0px;
     }
     .hero-cta-group {
         display: flex;
